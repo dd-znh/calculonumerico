@@ -1,8 +1,8 @@
-## Projeto 1 de Cálculo Numérico
+# Projeto 1 de Cálculo Numérico
 
-# Aluno: Eduardo Achar
+## Aluno: Eduardo Achar
 
-# Enunciado
+## Enunciado
 
 A novela das equações polinomiais
 
@@ -77,16 +77,16 @@ E a saída correspondente deve ser:
 Best quotas = [0.39, 10.02]
 1.000000
 
-# FEITOS:
+## FEITOS:
 
  - mod_min_max
  - cauchy
+ - fake_position
 
-# TODO:
+## TODO:
 
  - main
  - kojima
  - secantes
- - fake_position
 
-# Anotações
+## Anotações
