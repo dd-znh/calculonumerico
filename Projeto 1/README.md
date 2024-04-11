@@ -78,15 +78,13 @@ Best quotas = [0.39, 10.02]
 1.000000
 
 ## FEITOS:
-
  - mod_min_max
  - cauchy
  - fake_position
+ - kojima
 
 ## TODO:
-
  - main
- - kojima
  - secantes
 
 ## Anotações

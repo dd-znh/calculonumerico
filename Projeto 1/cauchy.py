@@ -21,7 +21,3 @@ def cauchy(P):
             break
 
     return round(x1, 2)
-
-# exemplo do slide
-# P = [1, -8, 19, -12]
-# print(cauchy(P))
