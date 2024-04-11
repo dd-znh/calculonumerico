@@ -1,6 +1,6 @@
 import math
 
-a, b =  0.7685398643432143, 0.7855179720146774 # intervalo a0, b0
+a, b =  0.7685, 0.7855 # intervalo a0, b0
 r = None
 
 def f(x): # funcao
