@@ -8,11 +8,12 @@ def compute_best_quota(P) -> tuple:
 
 def compute_root(P, a_b) -> float:
     max_inter = 5000
-    x0 = (a_b[0] + a_b[1]) / 2
-    x1 = x0 + 0.01
     if (f.f(P, a_b[0])) * (f.f(P, a_b[1])) <= 0:
         return fake_position.fake_position(P, a_b[0], a_b[1], max_inter)
-    return secantes.secantes(P, x0, x1, max_inter)
+    else:
+        x0 = (a_b[0] + a_b[1]) / 2
+        x1 = x0 + 0.01
+        return secantes.secantes(P, x0, x1, max_inter)
 
 def read_poly(n) -> list:
     l = []
@@ -22,7 +23,7 @@ def read_poly(n) -> list:
     return l
 
 def main():
-    n = int(input("Qual o grau do polinômio?"))  # Grau do polinômio
+    n = int(input())  # Grau do polinômio
     P = read_poly(n) # Coeficientes dos polinômios
 
     a_b = compute_best_quota(P)
