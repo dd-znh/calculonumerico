@@ -1,6 +1,6 @@
 def mod_min_max(P):
     P = [abs(element) for element in P]
-    return [format(mod_min(P), ".5f"), format(mod_max(P), ".5f")]
+    return [mod_min(P), mod_max(P)]
 
 def mod_max(P):
     Q = P[1:len(P)]

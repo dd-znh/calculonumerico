@@ -20,4 +20,4 @@ def cauchy(P):
         if abs(x1 - x) < tolerance:
             break
 
-    return round(x1, 2)
+    return float(x1)

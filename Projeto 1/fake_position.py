@@ -1,26 +1,24 @@
-def fake_position(P, a_b1, a_b2, max_inter):
+import f
+
+def fake_position(P, x0, x1, max_inter):
 
     cont = 0
+    x2 = None
+
     while cont < max_inter:
         cont += 1
 
-        def f(P, x):
-            y = 0
-            for i in range(len(P)):
-                y += P[i] * (x**(len(P)-2))
-            return y
+        if (x2 != None and abs(f.f(P, x2)) < 0.000001):
+            return x2
 
         def r(x):
-            return f(a_b1) - (((f(a_b2) - f(a_b1)) / (a_b2 - a_b1)) * (x - a_b1))
+            return f.f(P, x0) - (((f.f(P, x1) - f.f(P, x0)) / (x1 - x0)) * (x - x0))
         
-        xk = a_b1 - ((f(a_b1) * (a_b2-a_b1)) / (f(a_b2) - f(a_b1)))
+        x2 = x0 - ((f.f(P, x0) * (x1-x0)) / (f.f(P, x1) - f.f(P, x0)))
 
-        if f(xk) == 0:
-            print(xk)
-        else:
-            if f(xk) * f(a_b1) < 0:
-                a_b2 = xk
-            elif f(xk) * f(a_b2) < 0:
-                a_b1 = xk
-            else: # xk é a raíz
-                return xk
+        if f.f(P, x2) * f.f(P, x0) < 0:
+            x1 = x2
+        elif f.f(P, x2) * f.f(P, x1) < 0:
+            x0 = x2
+
+    return x2
