@@ -11,7 +11,7 @@ def compute_root(P, a_b) -> float:
     x0 = (a_b[0] + a_b[1]) / 2
     x1 = x0 + 0.01
     if (f.f(P, a_b[0])) * (f.f(P, a_b[1])) <= 0:
-        return fake_position.fake_position(P, x0, x1, max_inter)
+        return fake_position.fake_position(P, a_b[0], a_b[1], max_inter)
     return secantes.secantes(P, x0, x1, max_inter)
 
 def read_poly(n) -> list:
@@ -28,6 +28,5 @@ def main():
     a_b = compute_best_quota(P)
     print(f"Best quotas = [{a_b[0]:.2f}, {a_b[1]:.2f}]")
     x = compute_root(P, a_b)
-    print(x)
-    # print(f"{x:.6f}")
+    print(f"{x:.6f}")
 main()
